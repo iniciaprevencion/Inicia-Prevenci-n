@@ -586,3 +586,89 @@ footer {
   .topbar { font-size: 11px; }
   .topbar-inner { flex-direction: column; align-items: center; gap: 4px; }
 }
+
+/* ============================================
+   BOTÓN FLOTANTE WHATSAPP
+   ============================================ */
+.wa-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45);
+  z-index: 999;
+  text-decoration: none;
+  transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
+  animation: wa-pulse 2.5s infinite;
+}
+
+.wa-float:hover {
+  transform: scale(1.08);
+  background: #128C7E;
+  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.65);
+  animation: none;
+}
+
+.wa-icon {
+  width: 34px;
+  height: 34px;
+}
+
+.wa-tooltip {
+  position: absolute;
+  right: 75px;
+  background: #2C2C2A;
+  color: #FFFFFF;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(8px);
+  transition: opacity 0.25s, transform 0.25s;
+}
+
+.wa-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -6px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid #2C2C2A;
+}
+
+.wa-float:hover .wa-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@keyframes wa-pulse {
+  0%   { box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45), 0 0 0 0 rgba(37, 211, 102, 0.55); }
+  70%  { box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45), 0 0 0 18px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45), 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* Responsive: tooltip oculto en móvil para no estorbar */
+@media (max-width: 768px) {
+  .wa-float {
+    bottom: 18px;
+    right: 18px;
+    width: 56px;
+    height: 56px;
+  }
+  .wa-icon { width: 30px; height: 30px; }
+  .wa-tooltip { display: none; }
+}
