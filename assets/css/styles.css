@@ -1,16 +1,16 @@
 /* ============================================
    IniciaPrevención - Hoja de estilos principal
-   Paleta: Azul marino #0C447C / Naranjo #EF9F27
+   Paleta corporativa (logo oficial): Azul marino #001433 / Naranjo #E95206
    ============================================ */
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --azul: #0C447C;
-  --azul-claro: #185FA5;
-  --azul-muy-claro: #B5D4F4;
-  --naranjo: #EF9F27;
-  --naranjo-osc: #BA7517;
+  --azul: #001433;
+  --azul-claro: #0B2C5E;
+  --azul-muy-claro: #C9D6EA;
+  --naranjo: #E95206;
+  --naranjo-osc: #B83F03;
   --gris-osc: #2C2C2A;
   --gris-med: #5F5E5A;
   --gris-claro: #D3D1C7;
@@ -90,40 +90,12 @@ header {
   gap: 12px;
   text-decoration: none;
 }
-.logo-mark {
-  width: 44px;
-  height: 44px;
-  background: var(--azul);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  flex-shrink: 0;
+.logo-img {
+  display: block;
+  height: 60px;
+  width: auto;
 }
-.logo-mark::before {
-  content: '▲';
-  position: absolute;
-  top: -8px;
-  color: var(--naranjo);
-  font-size: 14px;
-}
-.logo-mark::after {
-  content: '✓';
-  color: var(--naranjo);
-  font-size: 22px;
-  font-weight: bold;
-}
-.logo-text {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--azul);
-}
-.logo-text span {
-  color: var(--naranjo);
-  font-weight: 400;
-}
+.footer-logo .logo-img { height: 64px; }
 .menu {
   display: flex;
   gap: 28px;
@@ -156,7 +128,7 @@ header {
 /* HERO */
 .hero {
   background:
-    linear-gradient(135deg, rgba(12,68,124,0.88) 0%, rgba(24,95,165,0.80) 100%),
+    linear-gradient(135deg, rgba(0,20,51,0.88) 0%, rgba(11,44,94,0.80) 100%),
     url('../img/industria.jpg') center/cover no-repeat;
   color: #FFFFFF;
   padding: 80px 24px;
@@ -170,7 +142,7 @@ header {
   top: -100px;
   width: 400px;
   height: 400px;
-  border: 20px solid rgba(239, 159, 39, 0.15);
+  border: 20px solid rgba(233, 82, 6, 0.15);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -285,7 +257,7 @@ section { padding: 72px 24px; }
 }
 .servicio-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(12, 68, 124, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 20, 51, 0.12);
 }
 .servicio-icon {
   width: 50px;
@@ -330,7 +302,7 @@ section { padding: 72px 24px; }
 }
 .nosotros-img {
   background:
-    linear-gradient(135deg, rgba(12,68,124,0.55) 0%, rgba(12,68,124,0.35) 100%),
+    linear-gradient(135deg, rgba(0,20,51,0.55) 0%, rgba(0,20,51,0.35) 100%),
     url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=900&q=80') center/cover no-repeat;
   border-radius: 8px;
   aspect-ratio: 4/3;
@@ -386,7 +358,7 @@ section { padding: 72px 24px; }
 .normativa .section-title { color: #FFFFFF; }
 .normativa .section-subtitle { color: #B4B2A9; }
 .normativa .section-tag {
-  background: rgba(239, 159, 39, 0.15);
+  background: rgba(233, 82, 6, 0.15);
   color: var(--naranjo);
 }
 .norma-grid {
@@ -396,7 +368,7 @@ section { padding: 72px 24px; }
 }
 .norma-card {
   background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(239, 159, 39, 0.2);
+  border: 1px solid rgba(233, 82, 6, 0.2);
   padding: 22px;
   border-radius: 6px;
 }
@@ -437,7 +409,7 @@ section { padding: 72px 24px; }
 /* CTA FINAL */
 .cta-final {
   background:
-    linear-gradient(rgba(12,68,124,0.87), rgba(12,68,124,0.87)),
+    linear-gradient(rgba(0,20,51,0.87), rgba(0,20,51,0.87)),
     url('../img/refineradora.jpg') center/cover no-repeat fixed;
   color: #FFFFFF;
   text-align: center;
@@ -576,6 +548,7 @@ footer {
   .hero h1 { font-size: 32px; }
   .section-title { font-size: 26px; }
   .nav { padding: 12px 16px; }
+  .logo-img { height: 42px; }
   section { padding: 48px 16px; }
 }
 
