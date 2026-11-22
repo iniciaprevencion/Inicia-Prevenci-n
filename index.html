@@ -45,6 +45,18 @@
 
 <!-- CSS -->
 <link rel="stylesheet" href="assets/css/styles.css">
+<!-- ESTILOS FRANJA SUPERIOR (incluidos aquí para que no dependan de styles.css) -->
+<style>
+.topbar{background:#001433;color:#fff;padding:8px 0;font-size:13px}
+.topbar .topbar-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:20px}
+.topbar .tb-msg{display:inline-flex;align-items:center;gap:8px;font-weight:500;letter-spacing:.2px}
+.topbar .tb-msg .tb-ico{color:#E95206}
+.topbar .tb-ico{width:16px;height:16px;flex-shrink:0}
+.topbar .tb-short{display:none}
+.topbar a.tb-btn{display:inline-flex;align-items:center;gap:6px;background:#E95206;color:#fff;padding:5px 14px;border-radius:4px;font-weight:600;text-decoration:none;transition:background .2s ease}
+.topbar a.tb-btn:hover{background:#B83F03;color:#fff}
+@media (max-width:480px){.topbar{font-size:12px;padding:6px 0}.topbar .topbar-inner{gap:12px;padding:0 16px}.topbar .tb-full{display:none}.topbar .tb-short{display:inline}.topbar a.tb-btn{padding:4px 10px}}
+</style>
 
 <!-- SCHEMA.ORG STRUCTURED DATA -->
 <script type="application/ld+json">
@@ -86,11 +98,11 @@
 <div class="topbar">
   <div class="topbar-inner">
     <span class="tb-msg">
-      <svg class="tb-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 12.5l2.5 2.5L16 9.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg class="tb-ico" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 12.5l2.5 2.5L16 9.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <span class="tb-full">Diagnóstico inicial sin costo · Respuesta en 24 h hábiles</span><span class="tb-short">Diagnóstico inicial sin costo</span>
     </span>
     <a class="tb-btn" href="https://wa.me/56967030723?text=Hola%20IniciaPrevenci%C3%B3n%2C%20quiero%20solicitar%20el%20diagn%C3%B3stico%20inicial%20sin%20costo." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
-      <svg class="tb-ico" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.001 3C9.373 3 4 8.373 4 15.001c0 2.39.73 4.715 2.111 6.703L4 29l7.515-2.06C13.4 28.193 14.687 28.5 16 28.5h.005c6.628 0 12.001-5.373 12.001-12.001S22.629 4.5 16.001 4.5z M16.001 26.5h-.005c-1.244 0-2.464-.336-3.531-.97l-.253-.151-4.46 1.223 1.243-4.347-.165-.265a9.42 9.42 0 0 1-1.45-5.49C7.379 9.78 11.26 5.9 16.001 5.9c2.518 0 4.882.98 6.661 2.76a9.38 9.38 0 0 1 2.764 6.681c-.001 4.74-3.882 8.621-9.425 8.621z M21.183 17.78c-.283-.142-1.677-.828-1.937-.923-.26-.094-.45-.142-.638.142-.189.284-.732.923-.897 1.113-.165.189-.331.213-.614.071-.283-.142-1.197-.441-2.28-1.408-.843-.751-1.413-1.679-1.578-1.962-.165-.284-.018-.437.124-.578.128-.127.283-.331.425-.496.142-.165.189-.284.283-.473.094-.189.047-.355-.024-.496-.071-.142-.638-1.535-.874-2.103-.231-.553-.466-.477-.638-.486-.165-.008-.354-.01-.543-.01s-.496.071-.756.355c-.26.284-.992.969-.992 2.361 0 1.393 1.016 2.738 1.158 2.927.142.189 2.001 3.054 4.851 4.286.677.293 1.205.467 1.617.598.679.215 1.297.185 1.785.112.544-.081 1.677-.685 1.913-1.347.236-.661.236-1.228.165-1.347-.071-.119-.26-.189-.543-.331z"/></svg>
+      <svg class="tb-ico" width="16" height="16" viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.001 3C9.373 3 4 8.373 4 15.001c0 2.39.73 4.715 2.111 6.703L4 29l7.515-2.06C13.4 28.193 14.687 28.5 16 28.5h.005c6.628 0 12.001-5.373 12.001-12.001S22.629 4.5 16.001 4.5z M16.001 26.5h-.005c-1.244 0-2.464-.336-3.531-.97l-.253-.151-4.46 1.223 1.243-4.347-.165-.265a9.42 9.42 0 0 1-1.45-5.49C7.379 9.78 11.26 5.9 16.001 5.9c2.518 0 4.882.98 6.661 2.76a9.38 9.38 0 0 1 2.764 6.681c-.001 4.74-3.882 8.621-9.425 8.621z M21.183 17.78c-.283-.142-1.677-.828-1.937-.923-.26-.094-.45-.142-.638.142-.189.284-.732.923-.897 1.113-.165.189-.331.213-.614.071-.283-.142-1.197-.441-2.28-1.408-.843-.751-1.413-1.679-1.578-1.962-.165-.284-.018-.437.124-.578.128-.127.283-.331.425-.496.142-.165.189-.284.283-.473.094-.189.047-.355-.024-.496-.071-.142-.638-1.535-.874-2.103-.231-.553-.466-.477-.638-.486-.165-.008-.354-.01-.543-.01s-.496.071-.756.355c-.26.284-.992.969-.992 2.361 0 1.393 1.016 2.738 1.158 2.927.142.189 2.001 3.054 4.851 4.286.677.293 1.205.467 1.617.598.679.215 1.297.185 1.785.112.544-.081 1.677-.685 1.913-1.347.236-.661.236-1.228.165-1.347-.071-.119-.26-.189-.543-.331z"/></svg>
       Escríbenos
     </a>
   </div>
